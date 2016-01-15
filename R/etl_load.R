@@ -143,7 +143,7 @@ init_airports <- function(obj, ...) {
   if (!file.exists(lcl)) {
     # https://github.com/beanumber/airlines/issues/30
     # need to test on OS X and Windows
-    download.file(src, lcl, method = "curl")
+    download.file(src, lcl)#, method = "curl")
   }
   
   raw <- readr::read_csv(lcl, col_names = FALSE)
